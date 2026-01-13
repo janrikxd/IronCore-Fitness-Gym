@@ -4,9 +4,9 @@ import os
 def create_connection():
     try:
         conn = mysql.connector.connect(
-            host="tramway.proxy.rlwy.net",
+            host="mainline.proxy.rlwy.net",
             user="root",
-            password="jlLxhTwMbOKTooHQzEBBgpgtwqTIXZWg",
+            password="YhrBFaJsFeguphapTEzOEnoquzRozFBX",
             database="railway",
             port=14890,
             
@@ -23,3 +23,4 @@ def create_connection():
     except Exception as e:
         print(f"General Error: {e}")
         return None
+
