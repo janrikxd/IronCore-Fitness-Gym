@@ -1,5 +1,4 @@
 import mysql.connector
-import os
 
 def create_connection():
     try:
@@ -9,18 +8,9 @@ def create_connection():
             password="YhrBFaJsFeguphapTEzOEnoquzRozFBX",
             database="railway",
             port=14890,
-            
-            connect_timeout=10 
+            connection_timeout=60
         )
-        if conn.is_connected():
-            print("Successfully connected to Railway Database!")
-            return conn
-            
-    except mysql.connector.Error as err:
-       
-        print(f"Database Error: {err}")
-        return None
+        return conn
     except Exception as e:
-        print(f"General Error: {e}")
+        print(f"Connection Error: {e}")
         return None
-
